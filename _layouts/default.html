@@ -27,13 +27,12 @@
                 <a class="profile-photo" href="{{ '/' | relative_url }}" aria-label="Alexander Heckett home" style="background-image: url('{{ '/photo.jpg' | relative_url }}');"></a>
                 <div class="sidebar-text">
                     <h1>Alexander Heckett</h1>
-                    <p>Rising Senior &middot; Math Major<br>Carnegie Mellon University</p>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="{{ '/#about' | relative_url }}">About</a></li>
-                        <li><a href="{{ '/#interests' | relative_url }}">Interests</a></li>
-                        <li><a href="{{ '/blog/' | relative_url }}">Notes</a></li>
+                        <li><a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">About</a></li>
+                        <li><a class="{% if page.url contains '/interests' %}active{% endif %}" href="{{ '/interests/' | relative_url }}">Interests</a></li>
+                        <li><a class="{% if page.url contains '/blog' or page.url contains '/notes' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">Notes</a></li>
                     </ul>
                 </nav>
             </div>
@@ -45,45 +44,5 @@
             </div>
         </main>
     </div>
-
-    <script>
-        document.querySelectorAll('nav a[href*="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const url = new URL(this.href);
-                if (url.pathname !== window.location.pathname || !url.hash) {
-                    return;
-                }
-
-                e.preventDefault();
-                const target = document.querySelector(url.hash);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('nav a');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (current && link.hash === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
