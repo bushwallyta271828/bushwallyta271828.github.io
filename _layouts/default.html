@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" sizes="32x32">
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ '/assets/favicon.png' | relative_url }}">
     {% if page.math %}
     <script>
         window.MathJax = {
@@ -24,7 +27,7 @@
     <div class="layout">
         <aside class="sidebar">
             <div class="sidebar-inner">
-                <a class="profile-photo" href="{{ '/' | relative_url }}" aria-label="Alexander Heckett home" style="background-image: url('{{ '/photo.jpg' | relative_url }}');"></a>
+                <a class="profile-photo" href="{{ '/' | relative_url }}" aria-label="Alexander Heckett home" style="background-image: url('{{ '/assets/photo.jpg' | relative_url }}');"></a>
                 <div class="sidebar-text">
                     <h1>Alexander Heckett</h1>
                 </div>
