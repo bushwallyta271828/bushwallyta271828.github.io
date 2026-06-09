@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.math %}
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    {% endif %}
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a class="profile-photo" href="{{ '/' | relative_url }}" aria-label="Alexander Heckett home" style="background-image: url('{{ '/photo.jpg' | relative_url }}');"></a>
+                <div class="header-text">
+                    <h1>Alexander Heckett</h1>
+                    <p>Rising Senior | Math Major | Carnegie Mellon University</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+                <li><a href="{{ '/#interests' | relative_url }}">Interests</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}">Notes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        {{ content }}
+    </main>
+
+    <script>
+        document.querySelectorAll('nav a[href*="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const url = new URL(this.href);
+                if (url.pathname !== window.location.pathname || !url.hash) {
+                    return;
+                }
+
+                e.preventDefault();
+                const target = document.querySelector(url.hash);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.backgroundColor = '';
+                if (current && link.hash === `#${current}`) {
+                    link.style.backgroundColor = 'rgba(255,255,255,0.2)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

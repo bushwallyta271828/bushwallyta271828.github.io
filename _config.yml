@@ -1,0 +1,10 @@
+title: Alexander Heckett
+description: Personal Website and Blog
+url: "https://aheckett.com"
+markdown: kramdown
+permalink: /notes/:year/:month/:day/:title/
+excerpt_separator: "<!--more-->"
+
+kramdown:
+  input: GFM
+  math_engine: mathjax
