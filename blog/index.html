@@ -1,23 +1,16 @@
 ---
 layout: default
-title: Notes
+title: Blog
 ---
 
 <section>
-    <h2>Notes</h2>
-    <p>Math and research notes, mostly for ideas that benefit from being written down carefully.</p>
+    <h2>Blog</h2>
 
-    <div class="post-list">
+    <ul class="post-list">
         {% for post in site.posts %}
-        <article class="post-list-item">
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
-            {% if post.excerpt %}
-            <div class="post-excerpt">{{ post.excerpt }}</div>
-            {% endif %}
-        </article>
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span class="post-list-date">{{ post.date | date: "%B %-d, %Y" }}</span></li>
         {% else %}
-        <p>No notes yet.</p>
+        <li>No posts yet.</li>
         {% endfor %}
-    </div>
+    </ul>
 </section>

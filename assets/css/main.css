@@ -119,11 +119,6 @@ main {
 section,
 .post {
     margin-bottom: 40px;
-    padding: 40px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    border-left: 4px solid #666;
 }
 
 h2 {
@@ -204,34 +199,30 @@ a:hover {
 
 .post-list {
     margin-top: 20px;
+    list-style: none;
 }
 
-.post-list-item {
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 6px;
-    border-left: 3px solid #888;
+.post-list li {
+    font-size: 1.2em;
 }
 
-.post-list-item + .post-list-item {
-    margin-top: 20px;
+.post-list li + li {
+    margin-top: 12px;
 }
 
-.post-list-item h3 {
-    margin-top: 0;
-}
-
-.post-list-item h3 a {
+.post-list li a {
     color: #2c2c2c;
     text-decoration: none;
 }
 
-.post-list-item h3 a:hover {
+.post-list li a:hover {
     text-decoration: underline;
 }
 
-.post-excerpt {
-    color: #555;
+.post-list-date {
+    margin-left: 12px;
+    color: #999;
+    font-size: 0.75em;
 }
 
 /* ---- Responsive: stack sidebar on top for narrow screens ---- */
@@ -277,10 +268,5 @@ a:hover {
 
     .main-inner {
         padding: 0 16px;
-    }
-
-    section,
-    .post {
-        padding: 25px;
     }
 }
