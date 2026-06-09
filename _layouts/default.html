@@ -21,31 +21,30 @@
     {% endif %}
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
                 <a class="profile-photo" href="{{ '/' | relative_url }}" aria-label="Alexander Heckett home" style="background-image: url('{{ '/photo.jpg' | relative_url }}');"></a>
-                <div class="header-text">
+                <div class="sidebar-text">
                     <h1>Alexander Heckett</h1>
-                    <p>Rising Senior | Math Major | Carnegie Mellon University</p>
+                    <p>Rising Senior &middot; Math Major<br>Carnegie Mellon University</p>
                 </div>
+                <nav>
+                    <ul>
+                        <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+                        <li><a href="{{ '/#interests' | relative_url }}">Interests</a></li>
+                        <li><a href="{{ '/blog/' | relative_url }}">Notes</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </header>
+        </aside>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="{{ '/#about' | relative_url }}">About</a></li>
-                <li><a href="{{ '/#interests' | relative_url }}">Interests</a></li>
-                <li><a href="{{ '/blog/' | relative_url }}">Notes</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="container">
-        {{ content }}
-    </main>
+        <main>
+            <div class="main-inner">
+                {{ content }}
+            </div>
+        </main>
+    </div>
 
     <script>
         document.querySelectorAll('nav a[href*="#"]').forEach(anchor => {
@@ -79,9 +78,9 @@
             });
 
             navLinks.forEach(link => {
-                link.style.backgroundColor = '';
+                link.classList.remove('active');
                 if (current && link.hash === `#${current}`) {
-                    link.style.backgroundColor = 'rgba(255,255,255,0.2)';
+                    link.classList.add('active');
                 }
             });
         });
