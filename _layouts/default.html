@@ -31,7 +31,9 @@
                 <nav>
                     <ul>
                         <li><a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">About</a></li>
+                        <li><a class="{% if page.url contains '/professional' %}active{% endif %}" href="{{ '/professional/' | relative_url }}">Professional</a></li>
                         <li><a class="{% if page.url contains '/writing' %}active{% endif %}" href="{{ '/writing/' | relative_url }}">Writing</a></li>
+                        <li><a class="{% if page.url contains '/recommendations' %}active{% endif %}" href="{{ '/recommendations/' | relative_url }}">Recommendations</a></li>
                     </ul>
                 </nav>
             </div>
