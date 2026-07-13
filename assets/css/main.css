@@ -71,35 +71,37 @@ body {
     margin-top: 12px;
 }
 
-.sidebar nav {
+.sidebar-contact {
     width: 100%;
     margin-top: 40px;
 }
 
-.sidebar nav ul {
+.contact-email {
+    font-size: 0.95em;
+    opacity: 0.85;
+}
+
+.contact-links {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 6px;
+    margin-top: 18px;
 }
 
-.sidebar nav a {
+.contact-links a {
     display: block;
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1em;
-    padding: 10px 16px;
+    font-size: 1.05em;
+    padding: 8px 16px;
     border-radius: 6px;
     transition: background-color 0.25s ease;
 }
 
-.sidebar nav a:hover {
+.contact-links a:hover {
     background-color: rgba(255,255,255,0.1);
-}
-
-.sidebar nav a.active {
-    background-color: rgba(255,255,255,0.2);
 }
 
 /* ---- Main content ---- */
@@ -172,15 +174,16 @@ a:hover {
         height: 140px;
     }
 
-    .sidebar nav {
+    .sidebar-contact {
         margin-top: 24px;
     }
 
-    .sidebar nav ul {
+    .contact-links {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
+        margin-top: 12px;
     }
 
     main {
