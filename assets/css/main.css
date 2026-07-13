@@ -116,8 +116,7 @@ main {
     padding: 0 40px;
 }
 
-section,
-.post {
+section {
     margin-bottom: 40px;
 }
 
@@ -146,69 +145,6 @@ a {
 
 a:hover {
     color: #ffffff;
-}
-
-.post-header {
-    background: transparent;
-    color: inherit;
-    padding: 0;
-    text-align: left;
-}
-
-.post-header h2 {
-    margin-bottom: 10px;
-}
-
-.post-date {
-    color: #aaa;
-    font-size: 0.95em;
-    margin-bottom: 8px;
-}
-
-.post-description {
-    color: #bdbdbd;
-    font-size: 1.05em;
-}
-
-.post-content h3 {
-    margin-top: 32px;
-}
-
-.post-content ul,
-.post-content ol {
-    margin: 1em 0 1em 1.5em;
-}
-
-.post-content li + li {
-    margin-top: 0.35em;
-}
-
-.post-list {
-    margin-top: 20px;
-    list-style: none;
-}
-
-.post-list li {
-    font-size: 1.2em;
-}
-
-.post-list li + li {
-    margin-top: 12px;
-}
-
-.post-list li a {
-    color: #f0f0f0;
-    text-decoration: none;
-}
-
-.post-list li a:hover {
-    text-decoration: underline;
-}
-
-.post-list-date {
-    margin-left: 12px;
-    color: #999;
-    font-size: 0.75em;
 }
 
 /* ---- Responsive: stack sidebar on top for narrow screens ---- */

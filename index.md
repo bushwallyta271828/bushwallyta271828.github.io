@@ -1,6 +1,5 @@
 ---
 layout: default
-title: About
 ---
 
 ## About Me
@@ -28,3 +27,11 @@ From a scalable oversight perspective, mathematics feels like an incredibly easy
 ### Probabilistic Logic
 
 I like to reason about AI Safety via Debate by assuming that there's some underlying network of arguments and facts and that debates traverse this network according to a path jointly controlled by the debaters. That perspective raises a natural question: what does this network actually look like? One might consider a Bayesian network, some kind of maximum entropy perspective, a more binary perspective with logical constraints that must be satisfied, etcetera. I've never been entirely satisfied by the canonical answers from argumentation theory, I wonder if there's more to be said.
+
+## News
+
+_Coming soon._
+
+## Resume
+
+_Coming soon._
