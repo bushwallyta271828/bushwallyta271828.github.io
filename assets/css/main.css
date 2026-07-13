@@ -78,7 +78,6 @@ body {
 
 .contact-email {
     font-size: 0.95em;
-    opacity: 0.85;
 }
 
 .contact-links {
@@ -86,7 +85,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    margin-top: 18px;
 }
 
 .contact-links a {
@@ -183,7 +181,6 @@ a:hover {
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
-        margin-top: 12px;
     }
 
     main {

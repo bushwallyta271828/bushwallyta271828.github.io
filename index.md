@@ -31,7 +31,3 @@ I like to reason about AI Safety via Debate by assuming that there's some underl
 ## News
 
 _Coming soon._
-
-## Resume
-
-_Coming soon._
