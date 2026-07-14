@@ -32,5 +32,5 @@ I like to reason about AI Safety via Debate by assuming that there's some underl
 
 ## News
 
-* I wrote about (synthetic scalable oversight)[https://www.lesswrong.com/posts/w3MGffxeaTfZHoW24/synthetic-scalable-oversight] together with a gang of friends, check it out!
-* I wrote about (topological debate)[https://www.lesswrong.com/posts/jCeRXgog38zRCci4K/topological-debate-framework], which is a fancy word for a fairly basic idea that I hadn't seen made explicit before. For more recent ideas on the same theme, talk to Rubi Hudson. 
+* I wrote about [synthetic scalable oversight](https://www.lesswrong.com/posts/w3MGffxeaTfZHoW24/synthetic-scalable-oversight) together with a gang of friends, check it out!
+* I wrote about [topological debate](https://www.lesswrong.com/posts/jCeRXgog38zRCci4K/topological-debate-framework), which is a fancy word for a fairly basic idea that I hadn't seen made explicit before. For more recent ideas on the same theme, talk to Rubi Hudson!
