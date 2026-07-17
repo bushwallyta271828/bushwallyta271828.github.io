@@ -4,9 +4,9 @@ layout: default
 
 ## About Me
 
-Hi! I'm Xander.
+Hi! I'm Xander, a Computer Science PhD student at Carnegie Mellon under Vincent Conitzer. 
 
-I'm a Computer Science PhD student at Carnegie Mellon under Vincent Conitzer. 
+
 
 My primary goal is to prevent existential risk from AI systems. I think that AI systems have the potential to reason faster and more competently than any human being and I think that this dynamic is conducive to problems for humanity. With that said, I have taken an increasing apathy to the actual mechanics of how neural networks behave because I feel that architectures are always liable to change and I doubt that any result or technique based on those mechanics is truly fundamental. Instead I feel drawn to studying the incentives and desires of AI systems at a more abstracted, game-theoretic level. I am particularly drawn to the intersection of scalable oversight research, Guaranteed Safe AI research (well, something like it), and AI control research. I have been very fortunate to work under Vincent Conitzer on research in this direction. I have also been involved in AI safety field-building, having been one of the co-founders of Carnegie Mellon's AI Safety Initiative student club and having helped out for two years.
 
